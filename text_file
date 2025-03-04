@@ -1,0 +1,21 @@
+** Keylogger Definition: A keylogger is a tool designed to monitor and record keystrokes on a keyboard. While it can be used for legitimate purposes, it's crucial to note that unauthorized use is illegal and unethical.
+
+** Dependencies: The primary dependency for this keylogger is the pynput library, which allows monitoring and controlling input devices.
+
+## Steps to Implement the Keylogger:
+
+** Install the pynput Library:  pip install pynput
+
+** Import Necessary Module:  from pynput import keyboard
+
+** Define Callback Functions:
+=> on_press(key): Handles events when a key is pressed.
+=> on_release(key): Handles events when a key is released and stops the listener upon pressing the 'Esc' key.
+
+** Set Up the Listener:
+
+with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
+    listener.join()
+
+
+ *** Check the program in the repository ***
